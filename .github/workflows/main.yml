@@ -1,6 +1,11 @@
-#include <stdio.h>
+name: Hello World Example
 
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World
+        run: echo "hello world"
